@@ -25,6 +25,11 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
   // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
   implementation("org.springframework.boot:spring-boot-starter-actuator")
+  /*
+  There is a vulnerability, and some IDEs may show warnings,
+  but it can be ignored because it will be overridden by the version specified in the proto project.
+  If you want to avoid this (though it may be redundant), specify BOMs.
+   */
   // https://mvnrepository.com/artifact/net.devh/grpc-spring-boot-starter
   implementation("net.devh:grpc-spring-boot-starter:3.1.0.RELEASE")
 

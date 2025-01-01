@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-  // BOM
+  // BOMs
   // https://mvnrepository.com/artifact/io.grpc/grpc-bom
   implementation(platform("io.grpc:grpc-bom:1.69.0"))
   // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-bom
