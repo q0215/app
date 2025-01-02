@@ -2,19 +2,20 @@ spring:
   main:
     banner-mode: off
   lifecycle:
-    timeout-per-shutdown-phase: 10s
+    timeout-per-shutdown-phase: 30s # default
 server:
-  port: 8080
+  port: 8080 # default
   shutdown: graceful
-  servlet:
-    encoding:
-      enabled: true
-      charset: UTF-8
-      force: true
 management:
   server:
-    port: 8081
+    port: 8081 # default
+  endpoint:
+    shutdown:
+      access: unrestricted
+  endpoints:
+    web:
+      exposure:
+        include: health,shutdown
 grpc:
   server:
-    port: 9090
-app.log.appender: console-text
+    port: 9090 # default
