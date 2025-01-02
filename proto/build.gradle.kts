@@ -5,6 +5,15 @@ plugins {
   id("com.google.protobuf") version "0.9.4"
 }
 
+group = "com.github.q0215"
+version = "0.0.0"
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(21)
+  }
+}
+
 repositories {
   mavenCentral()
 }
