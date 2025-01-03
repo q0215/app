@@ -32,6 +32,8 @@ dependencies {
    */
   // https://mvnrepository.com/artifact/net.devh/grpc-spring-boot-starter
   implementation("net.devh:grpc-spring-boot-starter:3.1.0.RELEASE")
+  // https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder
+  implementation("net.logstash.logback:logstash-logback-encoder:8.0")
 
   // Test dependencies
   // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test

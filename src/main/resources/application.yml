@@ -3,9 +3,11 @@ spring:
     banner-mode: off
   lifecycle:
     timeout-per-shutdown-phase: 30s # default
+  #profiles:
+  #  active: local
 server:
   port: 8080 # default
-  shutdown: graceful
+  shutdown: graceful # default since 3.4
 management:
   server:
     port: 8081 # default
