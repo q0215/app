@@ -1,7 +1,11 @@
 plugins {
+  // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-gradle-plugin
   id("org.springframework.boot") version "3.4.1"
+  // https://mvnrepository.com/artifact/io.spring.gradle/dependency-management-plugin
   id("io.spring.dependency-management") version "1.1.7"
+  // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-gradle-plugin
   kotlin("jvm") version "2.1.0"
+  // https://mvnrepository.com/artifact/org.jetbrains.kotlin.plugin.spring/org.jetbrains.kotlin.plugin.spring.gradle.plugin
   kotlin("plugin.spring") version "2.1.0"
 }
 
@@ -34,10 +38,18 @@ dependencies {
   implementation("net.devh:grpc-spring-boot-starter:3.1.0.RELEASE")
   // https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder
   implementation("net.logstash.logback:logstash-logback-encoder:8.0")
+  // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+  // Runtime dependencies
+  // https://mvnrepository.com/artifact/org.postgresql/postgresql
+  runtimeOnly("org.postgresql:postgresql:42.7.4")
 
   // Test dependencies
   // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
   testImplementation("org.springframework.boot:spring-boot-starter-test")
+  // https://mvnrepository.com/artifact/com.h2database/h2
+  testImplementation("com.h2database:h2")
 }
 
 tasks {

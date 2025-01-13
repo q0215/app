@@ -2,6 +2,7 @@ import com.google.protobuf.gradle.id
 
 plugins {
   java
+  // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-gradle-plugin
   id("com.google.protobuf") version "0.9.4"
 }
 

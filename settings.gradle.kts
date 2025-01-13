@@ -1,2 +1,2 @@
 rootProject.name = "app"
-include("proto")
+include("proto", "flyway")

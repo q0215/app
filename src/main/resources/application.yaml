@@ -3,8 +3,14 @@ spring:
     banner-mode: off
   lifecycle:
     timeout-per-shutdown-phase: 30s # default
-  #profiles:
-  #  active: local
+  datasource:
+    url: jdbc:postgresql://${POSTGRESQL_HOST}:${POSTGRESQL_PORT}/${POSTGRESQL_DATABASE}
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
+    hikari:
+      minimum-idle: 10 # default
+      maximum-pool-size: 10 # default
+      auto-commit: false
 server:
   port: 8080 # default
   shutdown: graceful # default since 3.4
